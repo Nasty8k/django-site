@@ -1,11 +1,21 @@
 from django.shortcuts import render, HttpResponse
 from django.core.mail import send_mail
-from django.conf import settings
+
+
+def send_email(request):
+    subject = "Заявка с сайта"
+    message = request.POST.get('name', '')
+    message += " " + request.POST.get('phone', '')
+    message += " " + request.POST.get('email', '')
+    if subject and message:
+        try:
+            send_mail(subject, message, ['_'], ['_'])
+        except BadHeaderError:
+            return HttpResponse('Invalid header found.')
+        return HttpResponseRedirect('/index')
+    else:
+        return HttpResponse('Make sure all fields are entered and valid.')
+
 # Create your views here.
 def index(request):
-    if request.method == 'POST':
-        message = "Заявка на звонок " + request.POST['name'] + " " + request.POST['email'] + " " + request.POST['phone']
-        send_mail('Contact Form', message, settings.EMAIL_HOST_USER, ['_@mail.ru'], fail_silently=False)
-
-
     return render(request, 'core/index.html')
