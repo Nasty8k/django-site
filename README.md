@@ -9,6 +9,8 @@ example django-site
 
 # Example
 * Linux:
+
+
 $ python3 -m pip install --upgrade pip
 $ sudo apt install python3-django
 
