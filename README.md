@@ -12,6 +12,7 @@ example django-site
 
 
 $ python3 -m pip install --upgrade pip
+
 $ sudo apt install python3-django
 
 * Windows:
