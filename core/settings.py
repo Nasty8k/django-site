@@ -9,19 +9,22 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+# Quick-start development settings - unsuitable for production
+
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'vdhs3-1rkeobn1!y5)%)b7dekt7x)8ycly3txox!&kpxy^7k3u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # Email settings
 EMAIL_HOST = 'smtp.mail.ru'
-EMAIL_HOST_USER = '_@mail.ru'
-EMAIL_HOST_PASSWORD = '-'
+EMAIL_HOST_USER = 'example@mail.ru'
+EMAIL_HOST_PASSWORD = '****'
 EMAIL_PORT = 465
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-
 ALLOWED_HOSTS = []
 
 
