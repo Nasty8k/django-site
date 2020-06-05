@@ -48,19 +48,5 @@ $(document).ready(function () {
     }
 
 
-// Отправка данных на сервер
-$("form").submit(function() { //Change
-  var th = $(this);
-  $.ajax({
-    type: "POST",
-    url: {% static 'core/php/mail.php' %},
-    data: th.serialize()
-  }).done(function() {
-    alert("Спасибо за заявку!");
-    setTimeout(function() {
-      th.trigger("reset");    }, 1000);
-  });
-  return false;
-});
 
 });
