@@ -9,11 +9,6 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# Quick-start development settings - unsuitable for production
-
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'vdhs3-1rkeobn1!y5)%)b7dekt7x)8ycly3txox!&kpxy^7k3u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
