@@ -16,9 +16,9 @@ $ sudo apt install python3-django
 
 pip install Django
 
-Start project 
+Start project in  Windows PowerShell
  
- Windows PowerShell
-    cd django-site
-    python ./manage.py runserver
+ 
+   cd django-site
+   python ./manage.py runserver
     
